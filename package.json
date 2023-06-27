@@ -1,6 +1,6 @@
 {
     "name": "path-tracker",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "This package is used to get the absolute paths for the target file / files / dir / dirs",
     "main": "dist/index.js",
     "module": "dist/index.mjs",

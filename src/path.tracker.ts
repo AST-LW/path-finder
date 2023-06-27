@@ -37,6 +37,10 @@ const __trackPathHelper = (
     return trackStatus;
 };
 
+export const trackRootPath = (): string => {
+    return process.cwd();
+};
+
 export const trackPath = (
     toFind: string,
     rootPath: string = process.cwd(),
@@ -55,21 +59,23 @@ export const trackRelativePath = (
     const pathContents = path.normalize(relativePathSegment).split(path.sep);
     const toFind = pathContents[pathContents.length - 1];
     const trackedPaths: TrackPathStatus = __trackPathHelper(toFind, rootPath, excludeSearchIn, paths);
-    
+
     if (trackedPaths.code === 0) {
         return trackedPaths;
     } else {
-        trackedPaths.paths = trackedPaths.paths?.map(path => {
-            // Matching path and relative path segment
-            if(path.includes(relativePathSegment)) {
-                return path
-            }
-        }).filter(path => path !== undefined) as string[];
+        trackedPaths.paths = trackedPaths.paths
+            ?.map((path) => {
+                // Matching path and relative path segment
+                if (path.includes(relativePathSegment)) {
+                    return path;
+                }
+            })
+            .filter((path) => path !== undefined) as string[];
 
         // paths are found, but after performing the filter operation we do get [] empty array as there is no match for the relative path segment, hence if not match is found handle make it null
-        if(trackedPaths.paths.length === 0) trackedPaths.paths = null;
-        else if(trackedPaths.paths.length > 1) {
-            trackedPaths.message = `multiple paths found, provide parent folder of "${pathContents[0]}" to get unique path`
+        if (trackedPaths.paths.length === 0) trackedPaths.paths = null;
+        else if (trackedPaths.paths.length > 1) {
+            trackedPaths.message = `multiple paths found, provide parent folder of "${pathContents[0]}" to get unique path`;
         }
 
         return trackedPaths;
