@@ -1,12 +1,13 @@
 {
     "name": "path-tracker",
-    "version": "1.0.0",
+    "version": "1.1.2",
     "description": "This package is used to get the absolute paths for the target file / files / dir / dirs",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
     "scripts": {
         "format": "npx prettier --write 'src/**/*ts' 'index.ts' 'tests/**/*.ts'",
+        "clean": "rm -r ./dist",
         "test": "npx jest",
         "build": "npx tsup index.ts --format cjs,esm --dts"
     },
@@ -20,6 +21,7 @@
     },
     "devDependencies": {
         "@types/jest": "^29.5.2",
+        "@types/node": "^20.3.2",
         "@types/shelljs": "^0.8.12",
         "jest": "^29.5.0",
         "prettier": "^2.8.8",
