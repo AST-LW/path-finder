@@ -1,1 +1,1 @@
-export { trackRootPath, trackPath, trackRelativePath } from "./src/path.tracker";
+export { trackRootPath, trackRelativePath } from "./src/path.tracker";
