@@ -1,6 +1,6 @@
 {
     "name": "path-tracker",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Node.js library for dynamic and reliable file path tracking within complex project structures, overcoming traditional limitations.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
