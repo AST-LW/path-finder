@@ -1,5 +1,5 @@
 <div style="text-align:center;">
-    <img src="./images/path-tracker-cover-image.png" alt="Description of the image" width="500" height="400">
+    <img src="https://raw.githubusercontent.com/AST-LW/path-tracker/blob/main/images/path-tracker-cover-image.png" alt="path-tracker-cover-image" width="500" height="400">
 </div>
 
 # Path Tracker

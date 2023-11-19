@@ -1,7 +1,7 @@
 {
     "name": "path-tracker",
     "version": "1.2.0",
-    "description": "This package is used to get the absolute paths for the target file / files / dir / dirs",
+    "description": "Node.js library for dynamic and reliable file path tracking within complex project structures, overcoming traditional limitations.",
     "main": "dist/index.js",
     "module": "dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -14,6 +14,10 @@
     "keywords": [],
     "author": "AST-LW",
     "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AST-LW/path-tracker"
+    },
     "dependencies": {
         "shelljs": "^0.8.5",
         "tsup": "^7.0.0",
